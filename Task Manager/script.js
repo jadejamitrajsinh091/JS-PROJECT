@@ -4,11 +4,11 @@ function openAddCardModal() {
 }
 
 function addCard() {
-  const name = document.getElementById("floatingInput").value;
+  const name = document.getElementById("floatingInput").value.trim();
 
-  const description = document.getElementById("floatingDescription").value;
+  const description = document.getElementById("floatingDescription").value.trim();
 
-  const date = document.getElementById("floatingDate").value;
+  const date = document.getElementById("floatingDate").value.trim();
 
   let cardContainer = document.getElementById("card-container");
 
@@ -49,50 +49,4 @@ function editCard(button)
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
