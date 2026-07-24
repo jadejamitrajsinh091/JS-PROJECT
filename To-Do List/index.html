@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-Commerce Crud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary mt-3 ms-3" onClick="openAddCardModal()">
+        Add Task
+    </button>
+    <div>
+        <div class="modal" id="addCardModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Task Adding Modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Task Heading" />
+                            <label for="floatingInput">Task Heading</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingDescription" placeholder="Price" />
+                            <label for="floatingdescription">Task Description</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="date" class="form-control mt-3" id="floatingDate" placeholder="date" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" onClick="addCard()">
+                            Add Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="editModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="editfloatingInput" placeholder="Task Head" />
+                        <label for="floatingInput">Edit Head</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="editfloatingDescription" placeholder="task" />
+                        <label for="floatingPrice">Edit Description</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="date" class="form-control mt-3" id="editfloatingDate" placeholder="date" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-primary" onClick="saveEditedCard()">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row" id="card-container" class="col-md-4"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
